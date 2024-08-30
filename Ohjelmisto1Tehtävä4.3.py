@@ -1,13 +1,15 @@
-luvut = []
+luku1 = float(input("Anna luku: "))
+pienin = suurin = luku1
 
-luku = input("Anna luku. ")
-luvut.append(float(luku))
-while luku != "":
-    luku = input("Anna luku. ")
+while True:
+    luku = input("Anna luku: ")
     if luku == "":
         break
-    luvut.append(float(luku))
+    luku = float(luku)
+    if luku < pienin:
+        pienin = luku
+    if luku > suurin:
+        suurin = luku
 
-if luvut:
-    print("Pienin luku on:", min(luvut))
-    print("Suurin luku on:", max(luvut))
+print(f"Pienin luku on: {pienin}")
+print(f"Suurin luku on: {suurin}")
