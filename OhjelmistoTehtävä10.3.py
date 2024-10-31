@@ -38,6 +38,12 @@ class Talo:
         else:
             print("Virhe: Hissin numero ei ole kelvollinen.")
 
+    def palohälytys(self):
+        print("\nPalohälytys! Kaikki hissit siirtyvät alimpaan kerrokseen.")
+        for i, hissi in enumerate(self.hissit):
+            print(f"Hissi {i + 1} siirtyy alimpaan kerrokseen.")
+            hissi.siirry_kerrokseen(self.alin_kerros)
+
 # Pääohjelma
 # Luodaan talo, jossa alin kerros on 1, ylin kerros on 10 ja talossa on 3 hissiä
 talo = Talo(1, 10, 3)
@@ -54,3 +60,7 @@ talo.aja_hissiä(2, 10)
 
 print("\nPalataan ensimmäisen hissin avulla takaisin alimpaan kerrokseen:")
 talo.aja_hissiä(0, 1)
+
+# Palohälytys
+print("\n--- Palohälytys käynnistyy! ---")
+talo.palohälytys()
