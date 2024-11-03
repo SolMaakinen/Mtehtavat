@@ -2,7 +2,7 @@ import requests
 
 
 def fetch_chuck_norris_joke():
-    # Hae satunnainen vitsi Chuck Norris -API:sta
+    # Hae satunnainen vitsi Chuck Norris API
     response = requests.get("https://api.chucknorris.io/jokes/random")
 
     # Tarkista, että vastaus on onnistunut
