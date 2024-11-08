@@ -1,0 +1,244 @@
+/* Global Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f7f4ef;
+    color: #333;
+}
+
+/* Page Section Wrapper for Full Background */
+.page-section {
+    background: linear-gradient(to bottom, #c9c6c3, #f7f4ef); /* Gray background covering header and main content */
+    padding: 0 0 60px 0; /* Extra padding at the bottom for spacing */
+}
+
+/* Header Styling with Max Width */
+header {
+    max-width: 1200px; /* Match body width */
+    margin: 0 auto;
+    padding: 20px 20px; /* Padding inside header for spacing */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4d4d4d;
+}
+
+header .logo {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: white;
+}
+
+/* Container for Consistent Alignment in Other Sections */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Main Section Styling */
+.main {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.main .container {
+    background: linear-gradient(to bottom, #c9c6c3, #e0e0e0);
+    padding: 40px 20px;
+    border-radius: 8px;
+}
+
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.main h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Image Placeholder Styling */
+.main-img {
+    width: 80%;
+    height: 300px;
+    background-color: #333;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+/* Text Styling Under Image */
+.main p {
+    font-size: 1.1em;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-top: 10px;
+    line-height: 1.6;
+}
+
+/* Products Section Styling */
+.products {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.products .container {
+    background: transparent; /* No additional background for products container */
+    padding: 40px 20px;
+    border-radius: 8px;
+}
+
+.products-header {
+    margin-bottom: 40px;
+}
+
+.large-img {
+    width: 100%;
+    height: 300px;
+    background-color: #333;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Product List Layout */
+.product-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product {
+    background-color: #e0e0e0;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: left;
+}
+
+/* Product Image Placeholder */
+.product-img {
+    width: 100%;
+    height: 150px;
+    background-color: #333;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+/* Product Title and Subtitle */
+.product h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.product h4 {
+    font-size: 1em;
+    font-weight: normal;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* Product Description Text */
+.product p {
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Contact Section Styling */
+.contact {
+    padding: 60px 0;
+}
+
+.contact .container {
+    padding: 40px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-info p {
+    line-height: 1.6;
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Map Styling */
+.map {
+    width: 100%;
+    height: 300px;
+    background-color: #333;
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
