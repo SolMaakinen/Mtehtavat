@@ -3,49 +3,71 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Georgia, serif; /* Changed font to Georgia */
 }
 
 body {
-    background-color: #f7f4ef;
-    color: #333;
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+    font-size: 16px; /* Base font size for rem units */
 }
 
 /* Page Section Wrapper for Full Background */
 .page-section {
     background: linear-gradient(to bottom, #c9c6c3, #f7f4ef); /* Gray background covering header and main content */
-    padding: 0 0 60px 0; /* Extra padding at the bottom for spacing */
+    padding-bottom: 4rem; /* Extra padding at the bottom for spacing */
 }
 
 /* Header Styling with Max Width */
+/* Header Styling */
+/* Header Styling */
+/* Header Styling */
 header {
-    max-width: 1200px; /* Match body width */
-    margin: 0 auto;
-    padding: 20px 20px; /* Padding inside header for spacing */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #4d4d4d;
+    max-width: 90%; /* Limit the header width to 90% of the viewport */
+    margin: 0 auto; /* Center the header with margins */
+    height: 80px; /* Set a fixed height for the header */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Vertically center navigation and logo */
+    justify-content: space-between; /* Space between logo and navigation */
+    padding: 0; /* Remove any extra padding */
+    background-color: #000000; /* Background color as fallback */
+    overflow: hidden; /* Ensure no overflow outside header bounds */
 }
 
+/* Logo Styling */
 header .logo {
-    color: white;
-    font-size: 1.5em;
-    font-weight: bold;
+    height: 100%; /* Match the height of the header */
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+header .logo img {
+    height: 100%; /* Scale to match header height */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image fills the container without distortion */
+    display: block; /* Prevent inline spacing issues */
+    margin: 0;
+}
+
+/* Navigation Styling */
+header nav {
+    padding-right: 3rem; /* Add padding to the right edge of navigation */
 }
 
 header nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 1.5rem; /* Space between navigation links */
     margin: 0;
     padding: 0;
 }
 
 header nav ul li a {
-    color: #ccc;
+    color: #E08800;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1rem;
+    line-height: 80px; /* Match header height for vertical alignment */
+    padding: 0.5rem 2rem; /* Add internal padding for better spacing */
 }
 
 header nav ul li a:hover {
@@ -54,170 +76,190 @@ header nav ul li a:hover {
 
 /* Container for Consistent Alignment in Other Sections */
 .container {
-    max-width: 1200px;
+    max-width: 90%; /* 90% of the viewport width */
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 /* Main Section Styling */
 .main {
-    padding: 60px 0;
-    text-align: center;
+    margin: 0; /* Ensure the section starts right under the header */
+    padding: 0; /* Remove any default padding */
 }
 
 .main .container {
-    background: linear-gradient(to bottom, #c9c6c3, #e0e0e0);
-    padding: 40px 20px;
-    border-radius: 8px;
+    background: linear-gradient(to bottom, #F5519B, #F5C4E5, rgba(247, 244, 239, 0)); /* Gradient background */
+    padding: 1.5rem 1.25rem; /* Add vertical and horizontal padding */
+    border-radius: 0.5rem; /* Optional: Rounded corners */
+    max-width: 90%; /* Ensure margins are retained */
+    margin: 0 auto; /* Center the container horizontally */
+    border-top-left-radius: 0; /* Ensure it connects seamlessly with the header */
+    border-top-right-radius: 0; /* No gap at the top corners */
+    overflow: hidden;
 }
+
 
 .main-content {
-    max-width: 800px;
-    margin: 0 auto;
+    display: flex; /* Enable flexbox on the main content */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center-align the text */
+    height: 100%; /* Make it take full height of the container */
+    padding: 2rem; /* Add padding for spacing around the text */
 }
 
+
 .main h1 {
-    font-size: 3em;
+    font-size: 4rem; /* Scales with base font size */
     font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.25rem;
+    color: #E08800; /* Primary text color */
+    text-shadow:
+        -1px -1px 0 #000, /* Top-left shadow */
+        1px -1px 0 #000,  /* Top-right shadow */
+        -1px 1px 0 #000,  /* Bottom-left shadow */
+        1px 1px 0 #000;   /* Bottom-right shadow */
+}
+
+.main p {
+    font-size: 1rem; /* Scales with base font size */
+    font-weight: normal;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    color: #000; /* Primary text color */
 }
 
 /* Main Image Placeholder Styling */
 .main-img {
-    width: 80%;
-    height: 300px;
-    background-color: #333;
-    color: #ccc;
-    display: flex;
-    align-items: center;
+    width: 97%; /* Stretch to the full width of the container */
+    height: 20%; /* Fixed height */
+    border-radius: 8px; /* Optional rounded corners */
+    overflow: hidden; /* Hide overflow */
+    display: flex; /* Ensures content stays centered */
     justify-content: center;
-    font-size: 1.5em;
-    margin: 20px auto;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    align-items: center;
+    background-color: #333; /* Fallback background color */
 }
 
-/* Text Styling Under Image */
-.main p {
-    font-size: 1.1em;
-    color: #666;
-    max-width: 700px;
-    margin: 0 auto;
-    padding-top: 10px;
-    line-height: 1.6;
+.main-img img {
+    width: 100%; /* Fill the container width */
+    height: 100%; /* Fill the container height */
+    object-fit: cover; /* Crop the image to fit */
 }
+
 
 /* Products Section Styling */
 .products {
-    padding: 60px 0;
+    padding: 0rem 0;
     text-align: center;
 }
 
 .products .container {
-    background: transparent; /* No additional background for products container */
-    padding: 40px 20px;
-    border-radius: 8px;
+    padding: 2.5rem 1.25rem;
+    border-radius: 0.5rem;
 }
 
 .products-header {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 
 .large-img {
     width: 100%;
-    height: 300px;
+    height: 18.75rem;
     background-color: #333;
     color: #ccc;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5em;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
 /* Product List Layout */
 .product-list {
     display: flex;
-    gap: 20px;
+    gap: 1.25rem; /* Horizontal gap between products */
+    flex-wrap: wrap; /* Wrap products on smaller screens */
     justify-content: center;
 }
 
 .product {
     background-color: #e0e0e0;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    padding: 1.25rem;
+    width: 18.75rem; /* Approximately 300px in rem */
+    box-shadow: 0rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
     text-align: left;
 }
 
 /* Product Image Placeholder */
 .product-img {
-    width: 100%;
-    height: 150px;
-    background-color: #333;
-    color: #ccc;
-    display: flex;
+    display: flex; /* Center image using flexbox */
     align-items: center;
     justify-content: center;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    border-radius: 4px;
+    height: 150px; /* Fixed height for uniform product thumbnails */
+    border-radius: 4px; /* Optional rounded corners */
+    overflow: hidden; /* Crop overflowing parts of the image */
+    background-color: #333; /* Fallback background */
+}
+
+.product-img img {
+    width: 100%; /* Fill the container's width */
+    height: 100%; /* Fill the container's height */
+    object-fit: cover; /* Maintain aspect ratio and crop as needed */
 }
 
 /* Product Title and Subtitle */
 .product h3 {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #333;
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
 }
 
 .product h4 {
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: normal;
     color: #666;
     font-style: italic;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 /* Product Description Text */
 .product p {
-    font-size: 0.9em;
+    font-size: 0.9rem;
     color: #333;
     line-height: 1.5;
 }
 
 /* Contact Section Styling */
 .contact {
-    padding: 60px 0;
+    padding: 4rem 0;
 }
 
 .contact .container {
-    padding: 40px 20px;
-    border-radius: 8px;
+    padding: 2.5rem 1.25rem;
+    border-radius: 0.5rem;
     text-align: center;
 }
 
 .contact-content {
-    max-width: 800px;
+    max-width: 50rem;
     margin: 0 auto;
     text-align: left;
 }
 
 .contact h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
     color: #333;
 }
 
 .contact-info p {
     line-height: 1.6;
-    font-size: 1em;
+    font-size: 1rem;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .contact-info a {
@@ -233,12 +275,19 @@ header nav ul li a:hover {
 /* Map Styling */
 .map {
     width: 100%;
-    height: 300px;
+    height: 18.75rem; /* Approximately 300px in rem */
     background-color: #333;
     color: #ccc;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2em;
-    margin-top: 20px;
+    font-size: 1.2rem;
+    margin-top: 1.25rem;
+}
+
+img {
+    max-width: 100%; /* Ensures the image doesn't exceed its container's width */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes extra spacing around inline images */
+    margin: 0 auto; /* Centers the image horizontally if inside a block container */
 }
