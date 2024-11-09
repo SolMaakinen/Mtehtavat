@@ -279,10 +279,10 @@ header nav ul li a:hover {
 }
 
 
-.contact-page h1 {
+.contact-page h2 {
     font-size: 4rem;
     font-weight: bold;
-    color:  #E08800;
+    color:  #000000;
     text-align: left;
     padding-top: 1rem;
     margin-top: 0;
