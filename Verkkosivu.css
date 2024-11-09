@@ -264,6 +264,7 @@ header nav ul li a:hover {
     color: #E08800; /* Existing color */
     margin-bottom: 1rem; /* Add space below the h3 */
     margin-top: 1rem; /* Optional: Adjust space above the h3 */
+
 }
 
 
@@ -282,10 +283,15 @@ header nav ul li a:hover {
 .contact-page h2 {
     font-size: 4rem;
     font-weight: bold;
-    color:  #000000;
+    color:  #E08800;
     text-align: left;
     padding-top: 1rem;
     margin-top: 0;
+    text-shadow:
+        -1px -1px 0 #000, /* Top-left shadow */
+        1px -1px 0 #000,  /* Top-right shadow */
+        -1px 1px 0 #000,  /* Bottom-left shadow */
+        1px 1px 0 #000;   /* Bottom-right shadow */
 }
 
 .contact {
