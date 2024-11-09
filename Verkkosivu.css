@@ -14,7 +14,7 @@ body {
 
 /* Page Section Wrapper for Full Background */
 .page-section {
-    background: linear-gradient(to bottom, #c9c6c3, #f7f4ef); /* Gray background covering header and main content */
+    background: #FFFFFF; /* Gray background covering header and main content */
     padding-bottom: 4rem; /* Extra padding at the bottom for spacing */
 }
 
@@ -25,7 +25,7 @@ body {
 header {
     max-width: 90%; /* Limit the header width to 90% of the viewport */
     margin: 0 auto; /* Center the header with margins */
-    height: 80px; /* Set a fixed height for the header */
+    height: 5rem; /* Set a fixed height for the header */
     display: flex; /* Flexbox for alignment */
     align-items: center; /* Vertically center navigation and logo */
     justify-content: space-between; /* Space between logo and navigation */
@@ -50,7 +50,7 @@ header .logo img {
 
 /* Navigation Styling */
 header nav {
-    padding-right: 3rem; /* Add padding to the right edge of navigation */
+    padding-right: 2rem; /* Add padding to the right edge of navigation */
 }
 
 header nav ul {
@@ -66,7 +66,7 @@ header nav ul li a {
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
-    line-height: 80px; /* Match header height for vertical alignment */
+    line-height: 5rem; /* Match header height for vertical alignment */
     padding: 0.5rem 2rem; /* Add internal padding for better spacing */
 }
 
@@ -112,6 +112,7 @@ header nav ul li a:hover {
 .main h1 {
     font-size: 4rem; /* Scales with base font size */
     font-weight: bold;
+    margin-top: 5rem;
     margin-bottom: 1.25rem;
     color: #E08800; /* Primary text color */
     text-shadow:
@@ -132,8 +133,8 @@ header nav ul li a:hover {
 /* Main Image Placeholder Styling */
 .main-img {
     width: 97%; /* Stretch to the full width of the container */
-    height: 20%; /* Fixed height */
-    border-radius: 8px; /* Optional rounded corners */
+    height: 40rem; /* Fixed height */
+    border-radius: 0.5rem; /* Optional rounded corners */
     overflow: hidden; /* Hide overflow */
     display: flex; /* Ensures content stays centered */
     justify-content: center;
@@ -147,20 +148,58 @@ header nav ul li a:hover {
     object-fit: cover; /* Crop the image to fit */
 }
 
-
 /* Products Section Styling */
+.products-page .main .container {
+    background: linear-gradient(to bottom, #F5519B, #F5C4E5, rgba(247, 244, 239, 0)); /* Gradient background */
+    padding: 0rem 2.5rem; /* Add vertical and horizontal padding */
+    max-width: 90%; /* Ensure margins are retained */
+    margin: 0 auto; /* Center the container horizontally */
+    border-top-left-radius: 0; /* Ensure it connects seamlessly with the header */
+    border-top-right-radius: 0; /* No gap at the top corners */
+    overflow: hidden;
+}
+
+.products-page .main-content{
+    display: flex; /* Enable flexbox on the main content */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center-align the text */
+    height: 100%; /* Make it take full height of the container */
+    padding: 0; /* Add padding for spacing around the text */
+}
+
+
 .products {
     padding: 0rem 0;
     text-align: center;
 }
 
 .products .container {
-    padding: 2.5rem 1.25rem;
+    padding: 2.5rem 1.5rem;
     border-radius: 0.5rem;
 }
 
 .products-header {
     margin-bottom: 2.5rem;
+}
+
+.main-img-product {
+    width: 100%; /* Stretch to the full width of the container */
+    height: 30rem; /* Fixed height */
+    border-bottom-left-radius: 0.5rem; /* Rounded corner on the bottom-left */
+    border-bottom-right-radius: 0.5rem; /* Rounded corner on the bottom-right */
+    overflow: hidden; /* Hide overflow */
+    display: flex; /* Ensures content stays centered */
+    justify-content: center;
+    align-items: center;
+    background-color: #333; /* Fallback background color */
+}
+
+.main-img-product img {
+    width: 100%; /* Fill the container width */
+    height: 100%; /* Fill the container height */
+    object-fit: cover; /* Crop the image to fit */
 }
 
 .large-img {
@@ -184,9 +223,10 @@ header nav ul li a:hover {
 }
 
 .product {
-    background-color: #e0e0e0;
+    background-color: #000;
     padding: 1.25rem;
-    width: 18.75rem; /* Approximately 300px in rem */
+    width: 33rem; /* Approximately 300px in rem */
+    height: 45.75rem;
     box-shadow: 0rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
     text-align: left;
@@ -197,9 +237,11 @@ header nav ul li a:hover {
     display: flex; /* Center image using flexbox */
     align-items: center;
     justify-content: center;
-    height: 150px; /* Fixed height for uniform product thumbnails */
-    border-radius: 4px; /* Optional rounded corners */
+    height: 30rem; /* Fixed height for uniform product thumbnails */
+    border-radius: 0.25rem; /* Optional rounded corners */
     overflow: hidden; /* Crop overflowing parts of the image */
+    align-items: center;
+    justify-content: center;
     background-color: #333; /* Fallback background */
 }
 
@@ -209,57 +251,65 @@ header nav ul li a:hover {
     object-fit: cover; /* Maintain aspect ratio and crop as needed */
 }
 
-/* Product Title and Subtitle */
-.product h3 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 0.3125rem;
-}
-
-.product h4 {
-    font-size: 1rem;
-    font-weight: normal;
-    color: #666;
-    font-style: italic;
-    margin-bottom: 0.625rem;
-}
-
 /* Product Description Text */
 .product p {
-    font-size: 0.9rem;
-    color: #333;
+    font-size: 1.1rem;
+    color: #FFFFFF;
     line-height: 1.5;
 }
 
+.product h3 {
+    font-size: 1.5rem; /* Existing font size */
+    font-weight: bold; /* Existing font weight */
+    color: #E08800; /* Existing color */
+    margin-bottom: 1rem; /* Add space below the h3 */
+    margin-top: 1rem; /* Optional: Adjust space above the h3 */
+}
+
+
 /* Contact Section Styling */
-.contact {
-    padding: 4rem 0;
+/* Contact Page Main Content */
+.contact-page .main-content {
+    display: block; /* Remove flexbox to simplify alignment */
+    text-align: left; /* Align text to the left */
+    padding: 2rem; /* Add spacing around the text */
+    margin-bottom: 0; /* Remove margin below "We’re here to help" */
+    padding-bottom: 0; /* Remove any padding if present */
+    padding-top: 0;
 }
 
-.contact .container {
-    padding: 2.5rem 1.25rem;
-    border-radius: 0.5rem;
-    text-align: center;
-}
 
-.contact-content {
-    max-width: 50rem;
-    margin: 0 auto;
+.contact-page h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color:  #E08800;
     text-align: left;
+    padding-top: 1rem;
+    margin-top: 0;
 }
 
-.contact h2 {
-    font-size: 2rem;
-    margin-bottom: 1.25rem;
-    color: #333;
+.contact {
+    padding: 0rem 0;
 }
+
+.contact-page .contact-content {
+    display: flex;
+    flex-direction: row; /* Stack content vertically */
+    gap: 40rem; /* Add space between the contact details and the map */
+    align-items: flex-start; /* Align items to the left */
+    justify-content: flex-start; /* Align content to the top */
+    text-align: left; /* Ensure text stays left-aligned */
+    padding: 0rem 2rem;
+}
+
+
 
 .contact-info p {
     line-height: 1.6;
     font-size: 1rem;
     color: #333;
-    margin-bottom: 1.25rem;
+    margin-top: 1rem; /* Add small spacing above "Visit us" */
+    margin-bottom: 0; /* Remove extra spacing below "Visit us" text */
 }
 
 .contact-info a {
@@ -273,17 +323,36 @@ header nav ul li a:hover {
 }
 
 /* Map Styling */
-.map {
-    width: 100%;
-    height: 18.75rem; /* Approximately 300px in rem */
-    background-color: #333;
-    color: #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    margin-top: 1.25rem;
+@media (max-width: 768px) {
+    .contact-page .contact-content {
+        flex-direction: column; /* Stack text and map vertically */
+        align-items: center; /* Center-align items */
+    }
+
+    .map {
+        width: 100%; /* Make the map full width */
+        height: 19rem; /* Adjust height for smaller screens */
+    }
 }
+
+.map {
+    width: 50%; /* Adjust width as needed */
+    position: relative; /* Create a containing block for the iframe */
+    height: 30rem; /* Let padding-bottom handle the height */
+    background-color: #333; /* Fallback background color */
+    overflow: hidden; /* Ensure no extra content shows outside bounds */
+    border-radius: 0.5rem; /* Optional rounded corners */
+}
+
+.map iframe {
+    position: absolute; /* Position iframe within the map container */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the iframe fill the container */
+    height: 100%; /* Make the iframe fill the container */
+    border: none; /* Remove any default iframe borders */
+}
+
 
 img {
     max-width: 100%; /* Ensures the image doesn't exceed its container's width */
