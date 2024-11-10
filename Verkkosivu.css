@@ -3,13 +3,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Georgia, serif; /* Changed font to Georgia */
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('./Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
     background-color: #FFFFFF;
     color: #FFFFFF;
-    font-size: 16px; /* Base font size for rem units */
+    font-size: 16px;
+    font-family: 'Playfair Display';
 }
 
 /* Page Section Wrapper for Full Background */
