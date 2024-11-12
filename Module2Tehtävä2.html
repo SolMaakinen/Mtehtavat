@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participants List</title>
+    <script src="Module2Tehtävä2.js" defer></script>
+</head>
+<body>
+    <h1>Participants List</h1>
+    <label for="participantCount">Number of Participants: </label>
+    <input type="number" id="participantCount" min="1" placeholder="Enter count">
+    <button onclick="addParticipants()">Submit</button>
+    <div id="participantForm" style="display:none;">
+        <h2>Enter Participant Names:</h2>
+        <div id="participantInputs"></div>
+        <button onclick="displayParticipants()">Show Participants</button>
+    </div>
+    <h2>Participants in Alphabetical Order:</h2>
+    <ol id="participantList"></ol>
+</body>
+</html>
